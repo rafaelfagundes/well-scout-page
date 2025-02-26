@@ -13,7 +13,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="py-12 px-4 relative overflow-hidden bg-foreground text-background dark:bg-foreground dark:text-background">
+    <footer className="py-12 px-4 relative overflow-hidden bg-foreground text-background">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 -z-10"></div>
 
@@ -27,7 +27,7 @@ const Footer = () => {
             className="mb-6 md:mb-0"
           >
             <h3 className="text-2xl font-bold gradient-text mb-2">WellScout</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Your Guide to Informed Food Choices</p>
+            <p className="text-sm text-background/80">Your Guide to Informed Food Choices</p>
           </motion.div>
 
           <motion.div
@@ -37,16 +37,32 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="flex space-x-4"
           >
-            <Button variant="outline" size="icon" className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+            >
               <TwitterLogo size={20} weight="fill" />
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full border-primary/20 hover:bg-primary/10">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+            >
               <InstagramLogo size={20} weight="fill" />
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full border-primary/20 hover:bg-primary/10">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+            >
               <LinkedinLogo size={20} weight="fill" />
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full border-primary/20 hover:bg-primary/10">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+            >
               <GithubLogo size={20} weight="fill" />
             </Button>
           </motion.div>
@@ -59,25 +75,25 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8 text-sm"
         >
-          <a href="#" className="text-background/80 hover:text-primary-foreground transition-colors dark:text-background/80">
+          <a href="#" className="text-background/80 hover:text-primary-foreground transition-colors">
             Home
           </a>
-          <a href="#features" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+          <a href="#features" className="text-background/80 hover:text-primary-foreground transition-colors">
             Features
           </a>
-          <a href="#how-it-works" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+          <a href="#how-it-works" className="text-background/80 hover:text-primary-foreground transition-colors">
             How It Works
           </a>
-          <a href="#tech-specs" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+          <a href="#tech-specs" className="text-background/80 hover:text-primary-foreground transition-colors">
             Tech Specs
           </a>
-          <a href="#download" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+          <a href="#download" className="text-background/80 hover:text-primary-foreground transition-colors">
             Download
           </a>
-          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+          <a href="#" className="text-background/80 hover:text-primary-foreground transition-colors">
             Privacy Policy
           </a>
-          <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+          <a href="#" className="text-background/80 hover:text-primary-foreground transition-colors">
             Terms of Service
           </a>
         </motion.div>
@@ -87,7 +103,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-sm text-background/80 dark:text-background/80"
+          className="text-center text-sm text-background/80"
         >
           <p>© {new Date().getFullYear()} WellScout. All rights reserved.</p>
         </motion.div>
