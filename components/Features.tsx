@@ -1,7 +1,7 @@
 // components/Features.tsx
 "use client"
 import { motion } from "motion/react"
-import { Barcode, MagnifyingGlass, Brain, ListChecks, Heart, Sparkle, Clock } from "@phosphor-icons/react"
+import { Barcode, MagnifyingGlass, ListChecks, Heart, Sparkle, Clock, Database } from "@phosphor-icons/react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 const featuresList = [
@@ -32,8 +32,8 @@ const featuresList = [
     description: "Save your favorite products and easily track your scan history for personalized recommendations.",
   },
   {
-    icon: <Clock size={48} weight="duotone" />,
-    title: "Real-time Updates",
+    icon: <Database size={48} weight="duotone" />,
+    title: "Updated Database",
     description: "Stay informed with the latest product information and nutritional guidelines as our database continuously expands.",
   },
 ]
