@@ -3,8 +3,27 @@
 import { motion } from "motion/react"
 import { ArrowUp, GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
 
 const Footer = () => {
+  const [showButton, setShowButton] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show button when scrolled down more than 200px
+      setShowButton(window.scrollY > 200)
+    }
+    
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll)
+    
+    // Initial check
+    handleScroll()
+    
+    // Clean up
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -17,23 +36,25 @@ const Footer = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0a0a0a]/30 -z-10"></div>
       
-      {/* Back to top button - positioned at bottom right */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4 }}
-        className="fixed bottom-6 right-6 z-50"
-      >
-        <Button
-          onClick={scrollToTop}
-          variant="outline"
-          size="icon"
-          className="cursor-pointer rounded-full bg-black/80 border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82] shadow-lg"
+      {/* Back to top button - positioned at bottom right, only shown when scrolled down */}
+      {showButton && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.3 }}
+          className="fixed bottom-6 right-6 z-50"
         >
-          <ArrowUp size={20} weight="bold" />
-        </Button>
-      </motion.div>
+          <Button
+            onClick={scrollToTop}
+            variant="outline"
+            size="icon"
+            className="cursor-pointer rounded-full bg-black/80 border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82] shadow-lg"
+          >
+            <ArrowUp size={20} weight="bold" />
+          </Button>
+        </motion.div>
+      )}
 
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
