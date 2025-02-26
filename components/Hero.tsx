@@ -9,6 +9,35 @@ import { useTheme } from "next-themes"
 import Image from "next/image"
 import { AppleLogo, GooglePlayLogo } from "@phosphor-icons/react"
 import { CustomButton } from "@/components/ui/custom-button"
+import { AvatarCircles } from "./magicui/avatar-circles"
+
+
+const avatars = [
+  {
+    imageUrl: "https://i.pravatar.cc/36?img=26",
+    profileUrl: "https://github.com/rafaelfagundes",
+  },
+  {
+    imageUrl: "https://i.pravatar.cc/36?img=68",
+    profileUrl: "https://github.com/rafaelfagundes",
+  },
+  {
+    imageUrl: "https://i.pravatar.cc/36?img=43",
+    profileUrl: "https://github.com/rafaelfagundes",
+  },
+  {
+    imageUrl: "https://i.pravatar.cc/36?img=29",
+    profileUrl: "https://github.com/rafaelfagundes",
+  },
+  {
+    imageUrl: "https://i.pravatar.cc/36?img=13",
+    profileUrl: "https://github.com/rafaelfagundes",
+  },
+  {
+    imageUrl: "https://avatars.githubusercontent.com/u/29810355",
+    profileUrl: "https://github.com/rafaelfagundes",
+  },
+];
 
 const Hero = () => {
   const { theme, setTheme } = useTheme()
@@ -56,7 +85,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg mb-8 md:text-xl md:leading-relaxed max-w-2xl mx-auto"
+          className="text-lg mb-8 md:text-xl md:leading-relaxed max-w-2xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -65,12 +94,19 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="flex flex-wrap justify-center gap-6 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="flex flex-wrap justify-center gap-6 mb-12">
+          <AvatarCircles avatarUrls={avatars} numPeople={99}></AvatarCircles>
+        </motion.div>
+        <motion.div
+          className="flex flex-wrap justify-center gap-6 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
         >
-          <CustomButton 
+          <CustomButton
             href="#"
             variant="primary"
             icon={<AppleLogo size={24} weight="fill" />}
@@ -82,7 +118,7 @@ const Hero = () => {
             App Store (iOS)
           </CustomButton>
 
-          <CustomButton 
+          <CustomButton
             href="#"
             variant="outline"
             icon={<GooglePlayLogo size={24} weight="fill" />}
@@ -99,14 +135,13 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-          className="relative mx-auto w-full max-w-md"
+          className="relative mx-auto w-72 max-w-md"
         >
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-[#0d7e84]/20 rounded-3xl blur-xl"></div>
+            <div className=""></div>
             <Image
-              src="/images/app1.png"
+              src="/images/app-double.png"
               alt="WellScout App Mockup"
-              className="relative rounded-3xl shadow-2xl animate-float pulse-glow"
               width={1179}
               height={2556}
             />
