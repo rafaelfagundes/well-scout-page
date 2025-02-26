@@ -13,9 +13,9 @@ const Footer = () => {
   }
 
   return (
-    <footer className="py-12 px-4 relative overflow-hidden bg-foreground text-background">
+    <footer className="py-12 px-4 relative overflow-hidden bg-[#121212] text-white dark:bg-[#121212] dark:text-white">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0a0a0a]/30 -z-10"></div>
 
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
@@ -26,8 +26,8 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="mb-6 md:mb-0"
           >
-            <h3 className="text-2xl font-bold gradient-text mb-2">WellScout</h3>
-            <p className="text-sm text-background/80">Your Guide to Informed Food Choices</p>
+            <h3 className="text-2xl font-bold text-[#00DF82] mb-2">WellScout</h3>
+            <p className="text-sm text-white/80">Your Guide to Informed Food Choices</p>
           </motion.div>
 
           <motion.div
@@ -40,28 +40,28 @@ const Footer = () => {
             <Button 
               variant="outline" 
               size="icon" 
-              className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+              className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
             >
               <TwitterLogo size={20} weight="fill" />
             </Button>
             <Button 
               variant="outline" 
               size="icon" 
-              className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+              className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
             >
               <InstagramLogo size={20} weight="fill" />
             </Button>
             <Button 
               variant="outline" 
               size="icon" 
-              className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+              className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
             >
               <LinkedinLogo size={20} weight="fill" />
             </Button>
             <Button 
               variant="outline" 
               size="icon" 
-              className="rounded-full border-background/20 hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+              className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
             >
               <GithubLogo size={20} weight="fill" />
             </Button>
@@ -75,25 +75,25 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-wrap justify-center gap-x-8 gap-y-2 mb-8 text-sm"
         >
-          <a href="#" className="text-background/80 hover:text-primary-foreground transition-colors">
+          <a href="#" className="text-white/80 hover:text-[#00DF82] transition-colors">
             Home
           </a>
-          <a href="#features" className="text-background/80 hover:text-primary-foreground transition-colors">
+          <a href="#features" className="text-white/80 hover:text-[#00DF82] transition-colors">
             Features
           </a>
-          <a href="#how-it-works" className="text-background/80 hover:text-primary-foreground transition-colors">
+          <a href="#how-it-works" className="text-white/80 hover:text-[#00DF82] transition-colors">
             How It Works
           </a>
-          <a href="#tech-specs" className="text-background/80 hover:text-primary-foreground transition-colors">
+          <a href="#tech-specs" className="text-white/80 hover:text-[#00DF82] transition-colors">
             Tech Specs
           </a>
-          <a href="#download" className="text-background/80 hover:text-primary-foreground transition-colors">
+          <a href="#download" className="text-white/80 hover:text-[#00DF82] transition-colors">
             Download
           </a>
-          <a href="#" className="text-background/80 hover:text-primary-foreground transition-colors">
+          <a href="#" className="text-white/80 hover:text-[#00DF82] transition-colors">
             Privacy Policy
           </a>
-          <a href="#" className="text-background/80 hover:text-primary-foreground transition-colors">
+          <a href="#" className="text-white/80 hover:text-[#00DF82] transition-colors">
             Terms of Service
           </a>
         </motion.div>
@@ -103,7 +103,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-sm text-background/80"
+          className="text-center text-sm text-white/80"
         >
           <p>© {new Date().getFullYear()} WellScout. All rights reserved.</p>
         </motion.div>
@@ -119,7 +119,7 @@ const Footer = () => {
             onClick={scrollToTop}
             variant="outline"
             size="icon"
-            className="rounded-full border-background hover:bg-background/10 hover:border-primary-foreground hover:text-primary-foreground"
+            className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
           >
             <ArrowUp size={20} weight="bold" />
           </Button>
