@@ -1,7 +1,7 @@
 // components/Features.tsx
 "use client"
 import { motion } from "motion/react"
-import { Barcode, MagnifyingGlass, Brain, ListChecks, Heart, Sparkle } from "@phosphor-icons/react"
+import { Barcode, MagnifyingGlass, Brain, ListChecks, Heart, Sparkle, Clock } from "@phosphor-icons/react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 const featuresList = [
@@ -31,6 +31,11 @@ const featuresList = [
     title: "Favorites & History",
     description: "Save your favorite products and easily track your scan history for personalized recommendations.",
   },
+  {
+    icon: <Clock size={48} weight="duotone" />,
+    title: "Real-time Updates",
+    description: "Stay informed with the latest product information and nutritional guidelines as our database continuously expands.",
+  },
 ]
 
 const Features = () => {
@@ -48,7 +53,7 @@ const Features = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-[#0d7e84] mx-auto mt-4"></div>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {featuresList.map((feature, index) => (
             <motion.div
               key={index}
