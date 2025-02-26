@@ -66,6 +66,10 @@
   @apply bg-clip-text text-transparent bg-gradient-to-r from-[#095256] to-[#0d7e84];
 }
 
+.dark .gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#00DF82] to-[#00a464];
+}
+
 .bg-mesh {
   background-color: #ffffff;
   background-image: radial-gradient(at 40% 20%, hsla(182, 81%, 18%, 0.1) 0px, transparent 50%),
