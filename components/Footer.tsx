@@ -37,31 +37,31 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="flex space-x-4"
           >
-            <Button 
-              variant="outline" 
-              size="icon" 
-              className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
+            <Button
+              variant="outline"
+              size="icon"
+              className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82]"
             >
               <TwitterLogo size={20} weight="fill" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="icon" 
-              className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
+            <Button
+              variant="outline"
+              size="icon"
+              className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82]"
             >
               <InstagramLogo size={20} weight="fill" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="icon" 
-              className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
+            <Button
+              variant="outline"
+              size="icon"
+              className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82]"
             >
               <LinkedinLogo size={20} weight="fill" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="icon" 
-              className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
+            <Button
+              variant="outline"
+              size="icon"
+              className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82]"
             >
               <GithubLogo size={20} weight="fill" />
             </Button>
@@ -119,7 +119,7 @@ const Footer = () => {
             onClick={scrollToTop}
             variant="outline"
             size="icon"
-            className="rounded-full border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
+            className="cursor-pointer rounded-full bg-black border-white/20 hover:bg-white/10 hover:border-[#00DF82] hover:text-[#00DF82]"
           >
             <ArrowUp size={20} weight="bold" />
           </Button>
