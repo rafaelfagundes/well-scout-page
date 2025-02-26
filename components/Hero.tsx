@@ -4,7 +4,8 @@
 import { useEffect, useState } from "react"
 import { motion } from "motion/react"
 import { Button } from "@/components/ui/button"
-import { MoonStar, Sun, Rocket, ArrowRight } from "lucide-react"
+import { MoonStar, Sun } from "lucide-react"
+import { AppleLogo, GooglePlayLogo } from "@phosphor-icons/react"
 import { useTheme } from "next-themes"
 import Image from "next/image"
 import { CustomButton } from "@/components/ui/custom-button"
@@ -111,25 +112,25 @@ const Hero = () => {
               <CustomButton 
                 href="#"
                 variant="primary"
-                icon={<Rocket size={24} weight="fill" />}
+                icon={<AppleLogo size={24} weight="fill" />}
                 hoverCardContent={{
-                  title: "Get Started",
-                  description: "Begin your journey with WellScout today."
+                  title: "Coming Soon!",
+                  description: "Be the first to know when we launch on iOS."
                 }}
               >
-                Get Started
+                App Store (iOS)
               </CustomButton>
 
               <CustomButton 
                 href="#"
                 variant="outline"
-                icon={<ArrowRight size={24} weight="fill" />}
+                icon={<GooglePlayLogo size={24} weight="fill" />}
                 hoverCardContent={{
-                  title: "Learn More",
-                  description: "Discover how WellScout can help you make better food choices."
+                  title: "Coming Soon!",
+                  description: "Be the first to know when we launch on Android."
                 }}
               >
-                Learn More
+                Google Play (Android)
               </CustomButton>
             </motion.div>
           </motion.div>
