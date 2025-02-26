@@ -67,7 +67,7 @@ const Hero = () => {
         </div>
       )}
 
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
           {/* Left Content */}
           <motion.div

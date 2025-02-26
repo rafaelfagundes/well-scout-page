@@ -46,7 +46,7 @@ const HowItWorks = () => {
         <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-primary/20 blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

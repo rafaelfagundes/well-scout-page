@@ -9,7 +9,7 @@ const TechSpecs = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent -z-10"></div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
