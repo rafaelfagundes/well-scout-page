@@ -108,25 +108,25 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
             >
-              <CustomButton
+              <CustomButton 
                 href="#"
                 variant="primary"
-                icon={<Rocket size={20} />}
+                icon={<Rocket size={24} weight="fill" />}
                 hoverCardContent={{
-                  title: "Launch Your Project",
-                  description: "Get started with our powerful platform today."
+                  title: "Get Started",
+                  description: "Begin your journey with WellScout today."
                 }}
               >
                 Get Started
               </CustomButton>
 
-              <CustomButton
+              <CustomButton 
                 href="#"
                 variant="outline"
-                icon={<ArrowRight size={20} />}
+                icon={<ArrowRight size={24} weight="fill" />}
                 hoverCardContent={{
                   title: "Learn More",
-                  description: "Discover how our platform can help you succeed."
+                  description: "Discover how WellScout can help you make better food choices."
                 }}
               >
                 Learn More
