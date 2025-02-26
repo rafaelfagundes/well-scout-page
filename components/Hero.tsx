@@ -9,6 +9,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 import { MoonStar, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import Image from "next/image"
+import { AppleLogo, GooglePlayLogo } from "@phosphor-icons/react"
 
 const Hero = () => {
   const { theme, setTheme } = useTheme()
@@ -65,36 +66,50 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-6 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
         >
           <HoverCard>
             <HoverCardTrigger asChild>
-              <Button
-                asChild
-                className="bg-gradient-to-r from-primary to-[#0d7e84] hover:from-[#0d7e84] hover:to-primary transition-all duration-300 shadow-lg hover:shadow-primary/20"
-                size="lg"
-              >
-                <Link href={"#"}>App Store (iOS)</Link>
-              </Button>
+              <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+                <Button
+                  asChild
+                  className="bg-gradient-to-r from-primary to-[#0d7e84] hover:from-[#0d7e84] hover:to-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 h-14 px-8"
+                >
+                  <Link href={"#"}>
+                    <AppleLogo size={24} weight="fill" className="mr-2" />
+                    App Store (iOS)
+                  </Link>
+                </Button>
+              </motion.div>
             </HoverCardTrigger>
-            <HoverCardContent>Coming Soon!</HoverCardContent>
+            <HoverCardContent className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-primary/20">
+              <p className="font-medium text-primary">Coming Soon!</p>
+              <p className="text-sm mt-1">Be the first to know when we launch on iOS.</p>
+            </HoverCardContent>
           </HoverCard>
 
           <HoverCard>
             <HoverCardTrigger asChild>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-primary hover:bg-primary/10 transition-all duration-300"
-              >
-                <Link href={"#"}>Google Play (Android)</Link>
-              </Button>
+              <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-primary hover:bg-primary/10 transition-all duration-300 h-14 px-8"
+                >
+                  <Link href={"#"}>
+                    <GooglePlayLogo size={24} weight="fill" className="mr-2" />
+                    Google Play (Android)
+                  </Link>
+                </Button>
+              </motion.div>
             </HoverCardTrigger>
-            <HoverCardContent>Coming Soon!</HoverCardContent>
+            <HoverCardContent className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-primary/20">
+              <p className="font-medium text-primary">Coming Soon!</p>
+              <p className="text-sm mt-1">Be the first to know when we launch on Android.</p>
+            </HoverCardContent>
           </HoverCard>
         </motion.div>
 
