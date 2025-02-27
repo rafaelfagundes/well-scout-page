@@ -4,6 +4,7 @@ import { motion } from "motion/react"
 import { ArrowUp, GithubLogo, InstagramLogo, LinkedinLogo, TwitterLogo } from "@phosphor-icons/react"
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 const Footer = () => {
   const [showButton, setShowButton] = useState(false)
@@ -13,13 +14,13 @@ const Footer = () => {
       // Show button when scrolled down more than 200px
       setShowButton(window.scrollY > 200)
     }
-    
+
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll)
-    
+
     // Initial check
     handleScroll()
-    
+
     // Clean up
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -35,7 +36,7 @@ const Footer = () => {
     <footer className="py-8 px-4 relative overflow-hidden bg-[#121212] text-white dark:bg-[#121212] dark:text-white">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0a0a0a]/30 -z-10"></div>
-      
+
       {/* Back to top button - positioned at bottom right, only shown when scrolled down */}
       {showButton && (
         <motion.div
@@ -65,8 +66,8 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="mb-4 md:mb-0"
           >
-            <h3 className="text-xl font-bold text-[#00DF82] mb-1">WellScout</h3>
-            <p className="text-xs text-white/80">Your Guide to Informed Food Choices</p>
+            <Image src="/images/logo-light.svg" alt="WellScout Logo" width={137} height={27} />
+            <p className="text-xs mt-1 text-[#00DF82] ">Your Guide to Informed Food Choices</p>
           </motion.div>
 
           <motion.div
