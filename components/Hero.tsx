@@ -10,73 +10,61 @@ import { useTheme } from "next-themes"
 import Image from "next/image"
 import { CustomButton } from "@/components/ui/custom-button"
 import { AvatarCircles } from "./magicui/avatar-circles"
+import { Ripple } from "./magicui/ripple"
 
 const avatars = [
   {
-    imageUrl: "https://i.pravatar.cc/36?img=1",
+    imageUrl: "https://i.pravatar.cc/36?img=26",
     profileUrl: "https://github.com/rafaelfagundes",
   },
   {
-    imageUrl: "https://i.pravatar.cc/36?img=2",
+    imageUrl: "https://i.pravatar.cc/36?img=38",
     profileUrl: "https://github.com/rafaelfagundes",
   },
   {
-    imageUrl: "https://i.pravatar.cc/36?img=3",
+    imageUrl: "https://i.pravatar.cc/36?img=68",
     profileUrl: "https://github.com/rafaelfagundes",
   },
   {
-    imageUrl: "https://i.pravatar.cc/36?img=4",
+    imageUrl: "https://i.pravatar.cc/36?img=41",
     profileUrl: "https://github.com/rafaelfagundes",
   },
   {
-    imageUrl: "https://i.pravatar.cc/36?img=5",
+    imageUrl: "https://i.pravatar.cc/36?img=56",
     profileUrl: "https://github.com/rafaelfagundes",
   },
   {
-    imageUrl: "https://i.pravatar.cc/36?img=6",
+    imageUrl: "https://avatars.githubusercontent.com/u/29810355",
     profileUrl: "https://github.com/rafaelfagundes",
   },
 ];
 
 const Hero = () => {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   return (
-    <section className="py-16 px-4 relative overflow-hidden md:py-28">
+    <section className="mx-10 relative overflow-hidden mt-10">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/20 blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/20 blur-3xl"></div>
       </div>
 
-      {/* Theme Toggle */}
-      {mounted && (
-        <div className="absolute top-4 right-4 z-10">
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="rounded-full"
-          >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <MoonStar className="h-5 w-5" />}
-          </Button>
-        </div>
-      )}
-
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
           {/* Left Content */}
           <motion.div
             className="md:w-1/2"
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+              className="mb-6"
+            >
+              <Image src="/images/icon.png" alt="WellScout Logo" width={72} height={72} className="rounded-2xl" />
+            </motion.div>
             <motion.h1
               className="text-5xl font-bold mb-4 md:text-7xl gradient-text"
               initial={{ opacity: 0, y: -20 }}
@@ -100,7 +88,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
               className="flex flex-wrap gap-6 mb-8">
-              <AvatarCircles avatarUrls={avatars} numPeople={250}></AvatarCircles>
+              <AvatarCircles avatarUrls={avatars} numPeople={99}></AvatarCircles>
             </motion.div>
 
             <motion.div
@@ -109,7 +97,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
             >
-              <CustomButton 
+              <CustomButton
                 href="#"
                 variant="primary"
                 icon={<AppleLogo size={24} weight="fill" />}
@@ -121,7 +109,7 @@ const Hero = () => {
                 App Store (iOS)
               </CustomButton>
 
-              <CustomButton 
+              <CustomButton
                 href="#"
                 variant="outline"
                 icon={<GooglePlayLogo size={24} weight="fill" />}
@@ -142,6 +130,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="relative md:w-1/2"
           >
+            <Ripple numCircles={4}></Ripple>
             <div className="relative">
               <Image
                 src="/images/app-double.png"

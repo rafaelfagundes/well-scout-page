@@ -3,7 +3,8 @@
 import React, { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Sun, Moon, Menu } from "lucide-react"
+import { Moon, Sun } from "@phosphor-icons/react"
+import { Menu } from "lucide-react"
 
 const navigationLinks = [
   { name: "Home", href: "#" },
@@ -11,8 +12,6 @@ const navigationLinks = [
   { name: "How It Works", href: "#how-it-works" },
   { name: "Tech Specs", href: "#tech-specs" },
   { name: "Download", href: "#download" },
-  { name: "Privacy Policy", href: "#" },
-  { name: "Terms of Service", href: "#" },
 ]
 
 export const Navbar = () => {
@@ -97,3 +96,4 @@ export const Navbar = () => {
 }
 
 export default Navbar
+

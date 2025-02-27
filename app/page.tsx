@@ -5,10 +5,12 @@ import HowItWorks from '@/components/HowItWorks';
 import TechSpecs from '@/components/TechSpecs';
 import Download from '@/components/Download';
 import Footer from '@/components/Footer';
+import Navbar from '@/components/NavBar';
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <Hero />
       <Features />
       <HowItWorks />
