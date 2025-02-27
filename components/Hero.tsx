@@ -1,12 +1,8 @@
 // components/Hero.tsx
 "use client"
 
-import { useEffect, useState } from "react"
 import { motion } from "motion/react"
-import { Button } from "@/components/ui/button"
-import { MoonStar, Sun } from "lucide-react"
 import { AppleLogo, GooglePlayLogo } from "@phosphor-icons/react"
-import { useTheme } from "next-themes"
 import Image from "next/image"
 import { CustomButton } from "@/components/ui/custom-button"
 import { AvatarCircles } from "./magicui/avatar-circles"

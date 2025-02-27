@@ -1,7 +1,7 @@
 // components/Features.tsx
 "use client"
 import { motion } from "motion/react"
-import { Barcode, MagnifyingGlass, ListChecks, Heart, Sparkle, Clock, Database } from "@phosphor-icons/react"
+import { Barcode, MagnifyingGlass, ListChecks, Heart, Sparkle, Database } from "@phosphor-icons/react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 const featuresList = [

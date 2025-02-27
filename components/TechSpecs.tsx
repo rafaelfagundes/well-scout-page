@@ -1,7 +1,7 @@
 // components/TechSpecs.tsx
 "use client"
 import { motion } from "motion/react"
-import { Code, DeviceMobile, Database, Robot, Barcode, Compass, File, Sparkle, Gauge, Heart } from "@phosphor-icons/react"
+import { Code, DeviceMobile, Robot, Barcode, Sparkle, Gauge, Heart } from "@phosphor-icons/react"
 
 const TechSpecs = () => {
   return (
