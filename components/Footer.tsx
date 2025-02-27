@@ -77,34 +77,42 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="flex space-x-3"
           >
-            <Button
-              variant="outline"
-              size="icon"
-              className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82] h-8 w-8"
-            >
-              <TwitterLogo size={20} weight="fill" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82] h-8 w-8"
-            >
-              <InstagramLogo size={20} weight="fill" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82] h-8 w-8"
-            >
-              <LinkedinLogo size={20} weight="fill" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82] h-8 w-8"
-            >
-              <GithubLogo size={20} weight="fill" />
-            </Button>
+            <a href="https://x.com/rafaelcflima" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="icon"
+                className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82] h-8 w-8"
+              >
+                <TwitterLogo size={20} weight="fill" />
+              </Button>
+            </a>
+            <a href="https://instagram.com/rafael_fagundes" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="icon"
+                className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82] h-8 w-8"
+              >
+                <InstagramLogo size={20} weight="fill" />
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/rafaelcfl/" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="icon"
+                className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82] h-8 w-8"
+              >
+                <LinkedinLogo size={20} weight="fill" />
+              </Button>
+            </a>
+            <a href="https://github.com/rafaelfagundes" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="icon"
+                className="cursor-pointer rounded-full border-white/20 bg-black hover:bg-black/10 hover:border-[#00DF82] hover:text-[#00DF82] h-8 w-8"
+              >
+                <GithubLogo size={20} weight="fill" />
+              </Button>
+            </a>
           </motion.div>
         </div>
 
