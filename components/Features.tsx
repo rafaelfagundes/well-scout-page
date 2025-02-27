@@ -60,11 +60,11 @@ const Features = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              whileHover={{ y: -10 }}
               className="h-full"
             >
-              <Card className="h-full border border-primary/10 bg-gradient-to-b from-white to-primary/5 dark:from-gray-900 dark:to-primary/10 backdrop-blur-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+              <Card className="h-full border border-primary/20 bg-gradient-to-b from-white to-primary/5 dark:from-gray-900 dark:to-primary/10 backdrop-blur-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
                 <CardHeader className="flex flex-row gap-4 items-center">
                   <div className="text-primary">{feature.icon}</div>
                   <CardTitle>{feature.title}</CardTitle>

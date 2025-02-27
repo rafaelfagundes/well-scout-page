@@ -96,25 +96,25 @@ const Hero = () => {
               <CustomButton
                 href="#"
                 variant="primary"
-                icon={<AppleLogo size={24} weight="fill" />}
+                icon={<AppleLogo size={24} weight="duotone" />}
                 hoverCardContent={{
                   title: "Coming Soon!",
                   description: "Be the first to know when we launch on iOS."
                 }}
               >
-                App Store (iOS)
+                App Store
               </CustomButton>
 
               <CustomButton
                 href="#"
                 variant="outline"
-                icon={<GooglePlayLogo size={24} weight="fill" />}
+                icon={<GooglePlayLogo size={24} weight="duotone" />}
                 hoverCardContent={{
                   title: "Coming Soon!",
                   description: "Be the first to know when we launch on Android."
                 }}
               >
-                Google Play (Android)
+                Google Play
               </CustomButton>
             </motion.div>
           </motion.div>

@@ -58,28 +58,28 @@ const Download = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <CustomButton 
+          <CustomButton
             href="#"
             variant="primary"
-            icon={<AppleLogo size={24} weight="fill" />}
+            icon={<AppleLogo size={24} weight="duotone" />}
             hoverCardContent={{
               title: "Coming Soon!",
               description: "Be the first to know when we launch on iOS."
             }}
           >
-            App Store (iOS)
+            App Store
           </CustomButton>
 
-          <CustomButton 
+          <CustomButton
             href="#"
             variant="outline"
-            icon={<GooglePlayLogo size={24} weight="fill" />}
+            icon={<GooglePlayLogo size={24} weight="duotone" />}
             hoverCardContent={{
               title: "Coming Soon!",
               description: "Be the first to know when we launch on Android."
             }}
           >
-            Google Play (Android)
+            Google Play
           </CustomButton>
         </motion.div>
 
@@ -88,7 +88,7 @@ const Download = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center max-w-md mx-auto p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl border border-primary/10 shadow-xl"
+          className="hidden text-center max-w-md mx-auto p-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl border border-primary/10 shadow-xl"
         >
           <h3 className="text-xl font-semibold mb-3 text-primary">Contact Information</h3>
           <p className="mb-4">{`Have questions? We're here to help!`}</p>
