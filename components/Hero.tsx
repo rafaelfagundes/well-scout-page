@@ -45,7 +45,7 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/20 blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-5xl px-4 sm:px-0">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
           {/* Left Content */}
           <motion.div
