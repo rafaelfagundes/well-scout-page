@@ -53,6 +53,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script defer data-domain="wellscout.vercel.app" src="https://plausible.rfagund.es/js/script.js"></script>
+      </head>
       <body className={sensation.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="bg-mesh min-h-screen">
