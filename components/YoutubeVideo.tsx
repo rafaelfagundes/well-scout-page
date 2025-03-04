@@ -1,18 +1,22 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function YoutubeVideo() {
 
-  // Get screen width
-  const screenWidth = (typeof window !== 'undefined' && window.innerWidth) || 0;
+  const [mounted, setMounted] = useState(false);
+  const [videoSizes, setVideoSizes] = useState({ width: 520, height: 292.5 });
 
-  const videoSize = screenWidth > 520 ? 520 : screenWidth - 40;
-  console.log(videoSize);
+  useEffect(() => {
+    setMounted(true);
+    const screenWidth = window.innerWidth;
+    const videoSize = screenWidth > 520 ? 520 : screenWidth - 40;
+    setVideoSizes({
+      width: videoSize,
+      height: videoSize * 0.5625
+    });
+  }, []);
 
-  const videoSizes = {
-    width: videoSize,
-    height: videoSize * 0.5625
-  }
+  if (!mounted) return null;
 
   return (
     <div
