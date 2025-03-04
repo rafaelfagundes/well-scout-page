@@ -21,7 +21,7 @@ function YoutubeVideo() {
 
   return (
     <div className="relative flex justify-center items-center py-10 bg-[#111]">
-      <div className="bg-[#222] rounded-2xl overflow-hidden shadow-[inset_0_0_10px_rgba(255,255,255,0.1)]">
+      <div className="bg-[#222] rounded-2xl overflow-hidden">
         <iframe
           width={videoSizes.width}
           height={videoSizes.height}
@@ -31,7 +31,7 @@ function YoutubeVideo() {
           allowFullScreen
         ></iframe>
       </div>
-    </div>
+    </div >
   )
 }
 

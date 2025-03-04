@@ -7,6 +7,7 @@ import Image from "next/image"
 import { CustomButton } from "@/components/ui/custom-button"
 import { AvatarCircles } from "./magicui/avatar-circles"
 import { Ripple } from "./magicui/ripple"
+import YoutubeVideo from "./YoutubeVideo"
 
 const avatars = [
   {
@@ -37,7 +38,7 @@ const avatars = [
 
 const Hero = () => {
   return (
-    <section className="mx-10 relative overflow-hidden mt-10">
+    <section className="relative overflow-hidden mt-10">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/20 blur-3xl"></div>
@@ -124,7 +125,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="relative md:w-1/2"
+            className="relative md:w-1/2 hidden sm:block"
           >
             <Ripple numCircles={4}></Ripple>
             <div className="relative">
@@ -139,6 +140,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+      <YoutubeVideo></YoutubeVideo>
     </section>
   )
 }
