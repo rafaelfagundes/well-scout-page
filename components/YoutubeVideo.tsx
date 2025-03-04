@@ -4,12 +4,13 @@ import React, { useEffect, useState } from 'react'
 function YoutubeVideo() {
 
   const [mounted, setMounted] = useState(false);
-  const [videoSizes, setVideoSizes] = useState({ width: 520, height: 292.5 });
+  const [videoSizes, setVideoSizes] = useState({ width: 1024, height: 1024 * 0.5625 });
 
   useEffect(() => {
+    const maxWidth = window.innerWidth - 160 > 1024 ? 1024 : window.innerWidth / 1.5;
     setMounted(true);
     const screenWidth = window.innerWidth;
-    const videoSize = screenWidth > 520 ? 520 : screenWidth - 40;
+    const videoSize = screenWidth > maxWidth ? maxWidth : screenWidth - 40;
     setVideoSizes({
       width: videoSize,
       height: videoSize * 0.5625
@@ -20,6 +21,7 @@ function YoutubeVideo() {
 
   return (
     <div
+      className="relative"
       style={{
         display: "flex",
         justifyContent: "center",
