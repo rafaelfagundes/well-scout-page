@@ -1,33 +1,43 @@
+"use client"
 import React from 'react'
 
 function YoutubeVideo() {
+
+  // Get screen width
+  const screenWidth = (typeof window !== 'undefined' && window.innerWidth) || 0;
+
+  const videoSize = screenWidth > 520 ? 520 : screenWidth - 40;
+  console.log(videoSize);
+
+  const videoSizes = {
+    width: videoSize,
+    height: videoSize * 0.5625
+  }
+
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "20px",
-        backgroundColor: "#000",
-        borderRadius: "20px",
-        boxShadow: "0 0 20px rgba(0,0,0,0.5)",
-        margin: "20px"
+        paddingTop: "40px",
+        paddingBottom: "40px",
+        backgroundColor: "#111",
       }}
     >
       <div
         style={{
           background: "#222",
-          padding: "10px",
-          borderRadius: "10px",
+          borderRadius: "16px",
+          overflow: "hidden",
           boxShadow: "inset 0 0 10px rgba(255,255,255,0.1)",
         }}
       >
         <iframe
-          width="560"
-          height="315"
+          width={videoSizes.width}
+          height={videoSizes.height}
           src="https://www.youtube.com/embed/4FT19RdkdNU"
-          title="YouTube Video"
-          frameBorder="0"
+          title="WellScout"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
