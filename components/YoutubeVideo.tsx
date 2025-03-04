@@ -20,25 +20,8 @@ function YoutubeVideo() {
   if (!mounted) return null;
 
   return (
-    <div
-      className="relative"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        paddingTop: "40px",
-        paddingBottom: "40px",
-        backgroundColor: "#111",
-      }}
-    >
-      <div
-        style={{
-          background: "#222",
-          borderRadius: "16px",
-          overflow: "hidden",
-          boxShadow: "inset 0 0 10px rgba(255,255,255,0.1)",
-        }}
-      >
+    <div className="relative flex justify-center items-center py-10 bg-[#111]">
+      <div className="bg-[#222] rounded-2xl overflow-hidden shadow-[inset_0_0_10px_rgba(255,255,255,0.1)]">
         <iframe
           width={videoSizes.width}
           height={videoSizes.height}
