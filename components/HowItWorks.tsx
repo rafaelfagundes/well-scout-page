@@ -40,7 +40,7 @@ const Step: React.FC<StepProps> = ({ icon, title, description, isLast, index }) 
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 px-4 relative overflow-hidden" id="how-it-works">
+    <section className="px-4 relative overflow-hidden" id="how-it-works">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 opacity-20">
         <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-primary/20 blur-3xl"></div>

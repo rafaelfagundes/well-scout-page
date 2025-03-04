@@ -26,8 +26,8 @@ export const CustomButton = ({
 }: CustomButtonProps) => {
   const buttonStyles = {
     primary:
-      "bg-gradient-to-r from-primary to-[#0d7e84] hover:from-[#0d7e84] hover:to-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 h-14 px-8",
-    outline: "border-primary/30 hover:bg-primary/10 transition-all duration-300 h-14 px-8",
+      "bg-gradient-to-r from-primary to-[#0d7e84] hover:from-[#0d7e84] hover:to-primary transition-all duration-300 shadow-lg hover:shadow-primary/20 h-14 px-8 min-w-40",
+    outline: "border-primary/30 hover:bg-primary/10 transition-all duration-300 h-14 px-8 min-w-40",
   }
 
   const buttonVariant = variant === "primary" ? "default" : "outline"

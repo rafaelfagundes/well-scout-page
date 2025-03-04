@@ -5,7 +5,7 @@ import { Code, DeviceMobile, Robot, Barcode, Sparkle, Gauge, Heart } from "@phos
 
 const TechSpecs = () => {
   return (
-    <section className="py-20 px-4 relative" id="tech-specs">
+    <section className="pt-10 px-4 relative" id="tech-specs">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent -z-10"></div>
 
@@ -91,10 +91,6 @@ const TechSpecs = () => {
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-primary mr-3"></div>
-                <span>React Native SVG</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-primary mr-3"></div>
                 <span>Reanimated</span>
               </div>
               <div className="flex items-center">
@@ -106,38 +102,38 @@ const TechSpecs = () => {
         </div>
 
         {/* Tech icons floating */}
-        <div className="relative h-32 mt-16 overflow-hidden">
+        <div className="flex flex-row overflow-hidden pt-16 space-between max-w-5xl justify-center items-center gap-10">
           <motion.div
-            className="absolute left-1/4 top-1/2"
-            animate={{ y: [0, -10, 0], opacity: [0.7, 1, 0.7] }}
+            className="top-1/2"
+            animate={{ y: [0, -12, 0], opacity: [0.7, 1, 0.7] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
           >
             <Gauge size={36} weight="duotone" className="text-primary" />
           </motion.div>
           <motion.div
-            className="absolute left-1/3 top-1/4"
-            animate={{ y: [0, -15, 0], opacity: [0.5, 1, 0.5] }}
+            className="top-1/4"
+            animate={{ y: [0, -17, 0], opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.5 }}
           >
             <Robot size={36} weight="duotone" className="text-primary" />
           </motion.div>
           <motion.div
-            className="absolute left-1/2 top-1/2"
-            animate={{ y: [0, -12, 0], opacity: [0.6, 1, 0.6] }}
+            className="top-1/2"
+            animate={{ y: [0, -14, 0], opacity: [0.6, 1, 0.6] }}
             transition={{ duration: 4.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1 }}
           >
             <Barcode size={36} weight="duotone" className="text-primary" />
           </motion.div>
           <motion.div
-            className="absolute left-2/3 top-1/3"
-            animate={{ y: [0, -8, 0], opacity: [0.7, 1, 0.7] }}
+            className="top-1/3"
+            animate={{ y: [0, -10, 0], opacity: [0.7, 1, 0.7] }}
             transition={{ duration: 3.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 1.5 }}
           >
             <Heart size={36} weight="duotone" className="text-primary" />
           </motion.div>
           <motion.div
-            className="absolute left-3/4 top-1/2"
-            animate={{ y: [0, -10, 0], opacity: [0.5, 1, 0.5] }}
+            className="top-1/2"
+            animate={{ y: [0, -12, 0], opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 2 }}
           >
             <Sparkle size={36} weight="duotone" className="text-primary" />
